@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 1200px;
+            height: 50px;
+            background-color: #5f4242;
+            font-size: 0px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            float: left;
+        }
+
+        .nav_container{
+            display: inline-block;
+        }
+
+
+        .main_menu>li>a:link,
+        .main_menu>li>a:visited {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 16px 0px;
+            color: #977b7b;
+            text-decoration: none;
+        }
+        .sub_menu>li>a:link,
+        .sub_menu>li>a:visited {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 16px 0px;
+            color: #977b7b;
+            text-decoration: none;
+        }
+        nav li > a:hover{
+            background-color: #1f1111;
+            color:white !important;
+        }
+        .sub_menu{
+            display: none;
+        }
+        section {
+            width: 1200px;
+            height: 500px;
+            background-color: green;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="/resource/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //main_menu에 마우스가 올라가면 각각의 sub_menu를 보여줌
+            var arr = [false,false,false,false];
+            $(".main_menu").mouseenter(function(){
+                //alert($(this).index());
+                $(this).children(".sub_menu").stop().slideDown(500);
+            });
+            $(".main_menu").mouseleave(function(){
+                $(this).children(".sub_menu").stop().slideUp(500);
+            });
+            /*
+                var arr = [false,false,false,false];
+            $(".main_menu").mouseenter(function(){
+                //alert($(this).index());
+                var index = $(this).index();
+                if(!arr[index]){
+                    $(this).children(".sub_menu").stop().slideDown(500,function(){
+                        arr[index] = true;
+                    });
+                }
+            });
+            $(".main_menu").mouseleave(function(){
+                var index = $(this).index();
+                if(arr[index]){
+                    $(this).children(".sub_menu").stop().slideUp(500,function(){
+                        arr[index] = false;
+                    });
+                }
+                
+            });
+            */
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_container">
+            <ul class="main_menu">
+                <li><a href="#">HOME</a></li>
+            </ul>
+            <ul class="main_menu">
+                <li><a href="#">예약</a></li>
+                <ul class="sub_menu">
+                    <li><a href="#">예약하기</a></li>
+                    <li><a href="#">예약조회</a></li>
+                </ul>
+            </ul>
+            <ul class="main_menu">
+                <li><a href="#">펜션스토리</a></li>
+                <ul class="sub_menu">
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">갤러리</a></li>
+                    <li><a href="#">QnA</a></li>
+                </ul>
+            </ul>
+            <ul class="main_menu">
+                <li><a href="#">펜션소개</a></li>
+                <ul class="sub_menu">
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">시설안내</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <section>
+
+    </section>
+</body>
+
+</html>
