@@ -6,13 +6,12 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='Pratice-insert.css'>
-    <script src='main.js'></script>
+    <script src='Practice-insert.js'></script>
 </head>
 <body>
     
     <h1>회원가입</h1>
-    <ol>
-
+    <ul>
         <li>아이디</li>
         <li><input type="text" name="id" id="id"></li>
         <li>암호</li>
@@ -22,13 +21,17 @@
         <li>이름</li>
         <li><input type="text" name="name" id="name"></li>
         <li>이메일</li>
-        <li><input type="text" name="emailid" id="emailid">@<select size="1" name="email" id="email" checked="gmail.com">
-        <option value="gmail">gmail.com</option>
-        <option value="naver">naver.com</option>
-        <option value="daum">hanmail.net</option>
-        <option value="">직접입력<input type="text" id="email"></option></li>
-        <li></li>
-        <li>개인정보 제공 동의<input type="text" name="" id="" >예</li>
-    </ol>
+        <li><input type="text" name="email1" value="email id" onfocus="this.value=;">
+            @<input type="text" name="email2" value="" disabled>
+            <select size="1" name="email" onchange="email_change()">
+        <option value="0">선택하세요</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="daum,net">hanmail.net</option>
+        <option value="nate.com">nate.com</option>
+        <option value="9">직접입력</option></select></li>
+
+        <li>개인정보 제공 동의<input type="checkbox" name="yes" >예</li>
+    </ul>
 </body>
 </html>
