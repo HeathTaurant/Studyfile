@@ -1,3 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+}
 ul {
     list-style-type: none;
 }
+
+#id, #pw, #pwch, #name{
+    width:300px;
+    border-style: none;
+    border-bottom: 1px solid black;
+}
+
+div input{
+    width: 150px;
+}
+
+section {
+    margin: auto;
+    width:400px;
+    height:600px;
+    border:1px solid black;
+}
+h1{
+    text-align: center;
+}
+input.check {
+    width:none;
+}
+

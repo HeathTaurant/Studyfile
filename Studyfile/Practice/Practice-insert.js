@@ -1,27 +1,14 @@
-function email_change(){
+function selectEmail(ele) {
+    var $ele = $(ele);
+    var $email2 = $('input[name=email2]');
+    // '1'인 경우 직접입력 
+    if ($ele.val() == "1") {
+        $email2.attr('readonly', false);
+        $email2.val('');
+    }
+    else {
+        $email2.attr('readonly', true);
+        $email2.val($ele.val());
+    }
+}
 
-    if(document.join.email.options[document.join.email.selectedIndex].value == '0'){
-    
-     document.join.email2.disabled = true;
-    
-     document.join.email2.value = "";
-    
-    }
-    
-    if(document.join.email.options[document.join.email.selectedIndex].value == '9'){
-    
-     document.join.email2.disabled = false;
-    
-     document.join.email2.value = "";
-    
-     document.join.email2.focus();
-    
-    } else{
-    
-     document.join.email2.disabled = true;
-    
-     document.join.email2.value = document.join.email.options[document.join.email.selectedIndex].value;
-    
-    }
-    
-    }
