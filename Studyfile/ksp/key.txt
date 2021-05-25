@@ -1,0 +1,2 @@
+openweather 포털 키값
+4aa7ed96a14954962265f230adb4d3db
