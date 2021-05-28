@@ -1,0 +1,55 @@
+
+.Footer.container {
+  display: flex;
+  flex-direction: column;
+  height: 230px;
+  background: #292929;
+  color: #5e6663;
+  border-top: 2px solid gray;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.footer__links {
+	display: flex;
+	color: #bbbbad;
+}
+
+.footer .footer__left{
+  flex-grow:1;
+  text-align:lfte;
+  padding-left: 250px;
+}
+
+
+.footer .footer__right{
+  flex-grow:1;
+  text-align:right;
+  font-size:150%;
+  padding-right: 250px;
+}
+
+.footer .description{
+  font-size:15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.description__copyright {
+	
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.footer a {
+	text-decoration:none; /*링크 밑줄 없어짐*/
+	color:black;	/*링크 색상*/	
+}
+
