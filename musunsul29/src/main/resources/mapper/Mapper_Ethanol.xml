@@ -4,12 +4,28 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
     <mapper namespace="com.musunsul29.db.MapperEthanol">
-    <select id="searchEthanol" parameterType="map" resultType="com.musunsul29.DTOEthanol">
-    select * from ethanol where et_name like '%"||#{search}||'%'
-    </select>
-    <select id="pageEthanol" parameterType="map" resultType="com.musunsul29.DTOEthanol">
-    select * from ethanol where et_eno=#{et_eno}
-    </select>
 	
+	<select id="myetList" resultType="com.musunsul29.DTOEthanol">
+	
+	select * from ethanol AS et join review AS re on et.et_pk=#{et_pk} = re.et_pk=#{et_pk}
+	
+	</select>
+	
+	
+	<select id="selectEthanol" resultType="com.musunsul29.DTOEthanol">
+	
+	select * from ethanol where et_name =#{et_name}
+	
+	</select>
+	
+	
+	<select id="searchEthanol"  parameterType="String" resultType="com.musunsul29.DTOEthanol">
+	
+	select * from ethanol where et_name like CONCAT('%',#{et_name},'%') 
+	</select>
+	
+		<select id="getEthanol" parameterType="int" resultType="com.musunsul29.DTOEthanol">
+	select * from ethanol where et_pk =#{et_pk}  
+	</select>
 
 </mapper>

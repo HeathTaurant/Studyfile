@@ -7,7 +7,7 @@ public class DTOEthanol {
 	private String et_kind;
 	private String et_image;
 	private String et_producer;
-	private String et_ciybtrt;
+	private String et_country;
 	private int et_count;
 	private String et_alcohol_proof;
 	private String et_jmt;
@@ -16,6 +16,11 @@ public class DTOEthanol {
 	private String et_body;
 	private String et_co2;
 	private String et_tmi;
+	
+	
+	public DTOEthanol() {
+		super();
+	}
 	
 	public int getEt_pk() {
 		return et_pk;
@@ -47,11 +52,11 @@ public class DTOEthanol {
 	public void setEt_producer(String et_producer) {
 		this.et_producer = et_producer;
 	}
-	public String getEt_ciybtrt() {
-		return et_ciybtrt;
+	public String getEt_country() {
+		return et_country;
 	}
-	public void setEt_ciybtrt(String et_ciybtrt) {
-		this.et_ciybtrt = et_ciybtrt;
+	public void setEt_country(String et_country) {
+		this.et_country = et_country;
 	}
 	public int getEt_count() {
 		return et_count;

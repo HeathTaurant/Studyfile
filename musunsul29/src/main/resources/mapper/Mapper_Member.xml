@@ -5,14 +5,32 @@
   
   <mapper namespace="com.musunsul29.db.MapperMember">
   
+  
 	<insert id="insertMember" parameterType="com.musunsul29.DTOMember">
-	insert into member values(#{mem_id},#{mem_email},#{mem_pw},#{mem_phonnumber},#{mem_nickname},#{mem_name},#{mem_sex})
+	insert into member(mem_id,mem_email,mem_pw,mem_phonnumber,mem_nickname,mem_name,mem_sex,mem_birthday,mem_age)
+		 values(#{mem_id},#{mem_email},#{mem_pw},#{mem_phonnumber},#{mem_nickname},
+		#{mem_name},#{mem_sex},#{mem_birthday},#{mem_age})
 	</insert>
 	
-	<update id="updateMember" parameterType="com.musunsul29.DTOMember">
-	update member set mem_email=#{mem_email}, mem_pw=#{mem_pw}, mem_phonnumber=#{mem_phonnumber}, mem_nickname=#{mem_nickname}, mem_name=#{mem_name}, mem_sex=#{mem_sex} where mem_id=#{mem_id}
-	</update>
+	<select id="idCheck" parameterType="String" resultType="int">
+  	
+  		select count(*) from member where mem_id = #{mem_id}
+  	
+  	</select>
 	
+	<select id="login" parameterType="map" resultType="com.musunsul29.DTOMember">
+		select * from member where mem_id = #{mem_id} and mem_pw = #{mem_pw} 
+	</select> 
+	
+	<update id="updateMember" parameterType="com.musunsul29.DTOMember">
+	update member set mem_email=#{mem_email}, mem_pw = #{mem_pw},
+	mem_phonnumber = #{mem_phonnumber}, mem_nickname = #{mem_nickname} where mem_id = #{mem_id}
+	
+		</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete from member where mem_id = #{mem_id} and mem_pw = #{mem_pw}	
+	</delete>
 	
 	
 </mapper>

@@ -1,7 +1,5 @@
 package com.musunsul29;
 
-import java.sql.Timestamp;
-
 public class DTOMember {
 	
 	private String mem_id;
@@ -11,6 +9,41 @@ public class DTOMember {
 	private String mem_nickname;
 	private String mem_name;
 	private String mem_sex;
+	private String mem_birthday;
+	private int mem_age;
+	private String mem_image;
+	
+	public DTOMember() {
+		super();
+	}
+	
+	public DTOMember(String mem_id, String mem_email,String mem_pw,String mem_phonnumber, String mem_nickname, String mem_name, String mem_sex,
+			 String mem_birthday, int mem_age, String mem_image) {
+		this.mem_id = mem_id;
+		this.mem_email = mem_email;
+		this.mem_pw = mem_pw;
+		this.mem_phonnumber = mem_phonnumber;
+		this.mem_nickname =mem_nickname;
+		this.mem_name = mem_name;
+		this.mem_sex = mem_sex;
+		this.mem_birthday = mem_birthday;
+		this.mem_age = mem_age;
+		this.mem_image = mem_image;
+		
+	}
+	
+	
+	//객체 순서대로 값으 들어가게 된다 
+	public DTOMember(String mem_id,String mem_email, String mem_pw, String mem_phonnumber,String mem_nickname) {
+		this.mem_id = mem_id;
+		this.mem_email = mem_email;
+		this.mem_pw = mem_pw;
+		this.mem_phonnumber = mem_phonnumber;
+		this.mem_nickname =mem_nickname;
+		
+	}
+	
+	
 	
 
 	public String getMem_id() {
@@ -55,10 +88,10 @@ public class DTOMember {
 	public void setMem_sex(String mem_sex) {
 		this.mem_sex = mem_sex;
 	}
-	public Timestamp getMem_birthday() {
+	public String getMem_birthday() {
 		return mem_birthday;
 	}
-	public void setMem_birthday(Timestamp mem_birthday) {
+	public void setMem_birthday(String mem_birthday) {
 		this.mem_birthday = mem_birthday;
 	}
 	public int getMem_age() {
@@ -73,9 +106,7 @@ public class DTOMember {
 	public void setMem_image(String mem_image) {
 		this.mem_image = mem_image;
 	}
-	private Timestamp mem_birthday;
-	private int mem_age;
-	private String mem_image;
+	
 	
 	
 

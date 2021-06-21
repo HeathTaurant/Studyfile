@@ -1,0 +1,781 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  border-style: none;
+}
+
+/* [name="sweet"],
+[name="sour"],
+[name="refresh"],
+[name="body"],
+[name="scent"],
+[name="alc"] {
+  display: none;
+} */
+
+input[type="radio"] {
+  display: none;
+}
+
+.container {
+  overflow: hidden;
+  /* background: yellow; */
+  padding-bottom: 400px;
+}
+
+/* 자바스크립트용 CSS */
+.box.sweet {
+  transition: all 4.5s;
+}
+
+.box.sour {
+  transition: all 9s;
+}
+
+.box.refresh {
+  transition: all 13s;
+}
+
+.box.body {
+  transition: all 17s;
+}
+
+.box.scent {
+  transition: all 20s;
+}
+
+.box_choice.sour {
+  /* transform: translateY(-700px); */
+  transition: all 2s;
+}
+
+.box_choice.refresh {
+  /* transform: translateY(-700px); */
+  transition: all 2s;
+}
+
+.box_choice.body {
+  /* transform: translateY(-700px); */
+  transition: all 2s;
+}
+
+.box_choice.scent {
+  /* transform: translateY(-700px); */
+  transition: all 2s;
+}
+
+.box_choice_alc {
+  /* transform: translateY(-700px); */
+  transition: all 2s;
+}
+
+.list__img {
+  transition: all 1s;
+  margin: 100px;
+  width: 50%;
+  /* transform: translateY(-700px); */
+}
+
+.box_number {
+  transition: all 2.5s;
+}
+
+.next__btn {
+  width: 30%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, rgb(77, 80, 165), rgb(15, 18, 165));
+  color: white;
+  font-size: 19px;
+  transition: all 3s;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.question_head {
+  font-size: 35px;
+  padding: 120px;
+}
+
+.point {
+  font-size: 40px;
+  color: rgba(52, 129, 0, 0.705);
+}
+
+.box_choice {
+  display: flex;
+  border: 1px solid;
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.box_choice .zero {
+  width: 10%;
+  height: 100%;
+  border-right: 3px dotted #ddd;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.box_choice .one,
+.box_choice .two,
+.box_choice .three,
+.box_choice .four {
+  width: 18%;
+  height: 100%;
+  border-right: 3px dotted #ddd;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.box_choice .five {
+  width: 18%;
+  height: 100%;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.box_choice_alc {
+  display: flex;
+  border: 1px solid;
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.box_choice_alc .zero {
+  width: 10%;
+  height: 100%;
+  border-right: 3px dotted #ddd;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.box_choice_alc .one,
+.box_choice_alc .two,
+.box_choice_alc .three,
+.box_choice_alc .four,
+.box_choice_alc .five,
+.box_choice_alc .six,
+.box_choice_alc .seven,
+.box_choice_alc .nine {
+  width: 18%;
+  height: 100%;
+  border-right: 3px dotted #ddd;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.box_choice_alc .ten {
+  width: 18%;
+  height: 100%;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.box_number {
+  display: flex;
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.box_number .zero {
+  width: 10%;
+  height: 100%;
+  padding: 1px;
+}
+
+.box_number .one,
+.box_number .two,
+.box_number .three,
+.box_number .four,
+.box_number .five {
+  width: 18%;
+  height: 100%;
+  padding: 1px;
+}
+
+.box_number {
+  display: flex;
+  border-radius: 50px;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+.box_number .zero {
+  width: 10%;
+  height: 100%;
+  padding: 1px;
+}
+
+.box_number .one,
+.box_number .two,
+.box_number .three,
+.box_number .four,
+.box_number .five,
+.box_number .six,
+.box_number .seven,
+.box_number .eight,
+.box_number .nine,
+.box_number .ten {
+  width: 18%;
+  height: 100%;
+  padding: 1px;
+}
+
+.next__btn:hover {
+  transform: translateY(-5px);
+}
+
+.list__img.animated {
+  transform: translateY(-700px);
+}
+
+.question__box {
+  /* background: blue; */
+  /* overflow: hidden; */
+  width: 100%;
+  max-width: 1200px;
+  height: 700px;
+  text-align: center;
+}
+
+.question1 {
+  transition: all 4s;
+}
+
+/* 단맛에 대한 CSS 노가다 */
+#sweet0:checked ~ .question__box .box_choice.sweet .zero {
+  background: #669900;
+  border-radius: 50px 0px 0px 50px;
+}
+
+#sweet1:checked ~ .question__box .box_choice.sweet .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sweet1:checked ~ .question__box .box_choice.sweet .one {
+  background: #669900;
+}
+
+#sweet2:checked ~ .question__box .box_choice.sweet .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sweet2:checked ~ .question__box .box_choice.sweet .zero,
+#sweet2:checked ~ .question__box .box_choice.sweet .one,
+#sweet2:checked ~ .question__box .box_choice.sweet .two {
+  background: #669900;
+}
+
+#sweet3:checked ~ .question__box .box_choice.sweet .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sweet3:checked ~ .question__box .box_choice.sweet .zero,
+#sweet3:checked ~ .question__box .box_choice.sweet .one,
+#sweet3:checked ~ .question__box .box_choice.sweet .two,
+#sweet3:checked ~ .question__box .box_choice.sweet .three {
+  background: #669900;
+}
+
+#sweet4:checked ~ .question__box .box_choice.sweet .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sweet4:checked ~ .question__box .box_choice.sweet .zero,
+#sweet4:checked ~ .question__box .box_choice.sweet .one,
+#sweet4:checked ~ .question__box .box_choice.sweet .two,
+#sweet4:checked ~ .question__box .box_choice.sweet .three,
+#sweet4:checked ~ .question__box .box_choice.sweet .four {
+  background: #669900;
+}
+
+#sweet5:checked ~ .question__box .box_choice.sweet .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sweet5:checked ~ .question__box .box_choice.sweet .five {
+  border-radius: 0px 50px 50px 0px;
+  background: #669900;
+}
+#sweet5:checked ~ .question__box .box_choice.sweet .zero,
+#sweet5:checked ~ .question__box .box_choice.sweet .one,
+#sweet5:checked ~ .question__box .box_choice.sweet .two,
+#sweet5:checked ~ .question__box .box_choice.sweet .three,
+#sweet5:checked ~ .question__box .box_choice.sweet .four,
+#sweet5:checked ~ .question__box .box_choice.sweet .five {
+  background: #669900;
+}
+
+/* 신맛에 대한 CSS 노가다 */
+#sour0:checked ~ .question__box .box_choice.sour .zero {
+  background: #669900;
+  border-radius: 50px 0px 0px 50px;
+}
+
+#sour1:checked ~ .question__box .box_choice.sour .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sour1:checked ~ .question__box .box_choice.sour .one {
+  background: #669900;
+}
+
+#sour2:checked ~ .question__box .box_choice.sour .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sour2:checked ~ .question__box .box_choice.sour .zero,
+#sour2:checked ~ .question__box .box_choice.sour .one,
+#sour2:checked ~ .question__box .box_choice.sour .two {
+  background: #669900;
+}
+
+#sour3:checked ~ .question__box .box_choice.sour .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sour3:checked ~ .question__box .box_choice.sour .zero,
+#sour3:checked ~ .question__box .box_choice.sour .one,
+#sour3:checked ~ .question__box .box_choice.sour .two,
+#sour3:checked ~ .question__box .box_choice.sour .three {
+  background: #669900;
+}
+
+#sour4:checked ~ .question__box .box_choice.sour .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sour4:checked ~ .question__box .box_choice.sour .zero,
+#sour4:checked ~ .question__box .box_choice.sour .one,
+#sour4:checked ~ .question__box .box_choice.sour .two,
+#sour4:checked ~ .question__box .box_choice.sour .three,
+#sour4:checked ~ .question__box .box_choice.sour .four {
+  background: #669900;
+}
+
+#sour5:checked ~ .question__box .box_choice.sour .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#sour5:checked ~ .question__box .box_choice.sour .five {
+  border-radius: 0px 50px 50px 0px;
+  background: #669900;
+}
+#sour5:checked ~ .question__box .box_choice.sour .zero,
+#sour5:checked ~ .question__box .box_choice.sour .one,
+#sour5:checked ~ .question__box .box_choice.sour .two,
+#sour5:checked ~ .question__box .box_choice.sour .three,
+#sour5:checked ~ .question__box .box_choice.sour .four,
+#sour5:checked ~ .question__box .box_choice.sour .five {
+  background: #669900;
+}
+
+/* 청량감에 대한 CSS 노가다 */
+#refresh0:checked ~ .question__box .box_choice.refresh .zero {
+  background: #669900;
+  border-radius: 50px 0px 0px 50px;
+}
+
+#refresh1:checked ~ .question__box .box_choice.refresh .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#refresh1:checked ~ .question__box .box_choice.refresh .one {
+  background: #669900;
+}
+
+#refresh2:checked ~ .question__box .box_choice.refresh .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#refresh2:checked ~ .question__box .box_choice.refresh .zero,
+#refresh2:checked ~ .question__box .box_choice.refresh .one,
+#refresh2:checked ~ .question__box .box_choice.refresh .two {
+  background: #669900;
+}
+
+#refresh3:checked ~ .question__box .box_choice.refresh .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#refresh3:checked ~ .question__box .box_choice.refresh .zero,
+#refresh3:checked ~ .question__box .box_choice.refresh .one,
+#refresh3:checked ~ .question__box .box_choice.refresh .two,
+#refresh3:checked ~ .question__box .box_choice.refresh .three {
+  background: #669900;
+}
+
+#refresh4:checked ~ .question__box .box_choice.refresh .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#refresh4:checked ~ .question__box .box_choice.refresh .zero,
+#refresh4:checked ~ .question__box .box_choice.refresh .one,
+#refresh4:checked ~ .question__box .box_choice.refresh .two,
+#refresh4:checked ~ .question__box .box_choice.refresh .three,
+#refresh4:checked ~ .question__box .box_choice.refresh .four {
+  background: #669900;
+}
+
+#refresh5:checked ~ .question__box .box_choice.refresh .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#refresh5:checked ~ .question__box .box_choice.refresh .five {
+  border-radius: 0px 50px 50px 0px;
+  background: #669900;
+}
+#refresh5:checked ~ .question__box .box_choice.refresh .zero,
+#refresh5:checked ~ .question__box .box_choice.refresh .one,
+#refresh5:checked ~ .question__box .box_choice.refresh .two,
+#refresh5:checked ~ .question__box .box_choice.refresh .three,
+#refresh5:checked ~ .question__box .box_choice.refresh .four,
+#refresh5:checked ~ .question__box .box_choice.refresh .five {
+  background: #669900;
+}
+
+/* 바디감에 대한 CSS 노가다 */
+#body0:checked ~ .question__box .box_choice.body .zero {
+  background: #669900;
+  border-radius: 50px 0px 0px 50px;
+}
+
+#body1:checked ~ .question__box .box_choice.body .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#body1:checked ~ .question__box .box_choice.body .one {
+  background: #669900;
+}
+
+#body2:checked ~ .question__box .box_choice.body .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#body2:checked ~ .question__box .box_choice.body .zero,
+#body2:checked ~ .question__box .box_choice.body .one,
+#body2:checked ~ .question__box .box_choice.body .two {
+  background: #669900;
+}
+
+#body3:checked ~ .question__box .box_choice.body .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#body3:checked ~ .question__box .box_choice.body .zero,
+#body3:checked ~ .question__box .box_choice.body .one,
+#body3:checked ~ .question__box .box_choice.body .two,
+#body3:checked ~ .question__box .box_choice.body .three {
+  background: #669900;
+}
+
+#body4:checked ~ .question__box .box_choice.body .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#body4:checked ~ .question__box .box_choice.body .zero,
+#body4:checked ~ .question__box .box_choice.body .one,
+#body4:checked ~ .question__box .box_choice.body .two,
+#body4:checked ~ .question__box .box_choice.body .three,
+#body4:checked ~ .question__box .box_choice.body .four {
+  background: #669900;
+}
+
+#body5:checked ~ .question__box .box_choice.body .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#body5:checked ~ .question__box .box_choice.body .five {
+  border-radius: 0px 50px 50px 0px;
+  background: #669900;
+}
+#body5:checked ~ .question__box .box_choice.body .zero,
+#body5:checked ~ .question__box .box_choice.body .one,
+#body5:checked ~ .question__box .box_choice.body .two,
+#body5:checked ~ .question__box .box_choice.body .three,
+#body5:checked ~ .question__box .box_choice.body .four,
+#body5:checked ~ .question__box .box_choice.body .five {
+  background: #669900;
+}
+
+/* 향에 대한 CSS 노가다 */
+#scent0:checked ~ .question__box .box_choice.scent .zero {
+  background: #669900;
+  border-radius: 50px 0px 0px 50px;
+}
+
+#scent1:checked ~ .question__box .box_choice.scent .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#scent1:checked ~ .question__box .box_choice.scent .one {
+  background: #669900;
+}
+
+#scent2:checked ~ .question__box .box_choice.scent .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#scent2:checked ~ .question__box .box_choice.scent .zero,
+#scent2:checked ~ .question__box .box_choice.scent .one,
+#scent2:checked ~ .question__box .box_choice.scent .two {
+  background: #669900;
+}
+
+#scent3:checked ~ .question__box .box_choice.scent .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#scent3:checked ~ .question__box .box_choice.scent .zero,
+#scent3:checked ~ .question__box .box_choice.scent .one,
+#scent3:checked ~ .question__box .box_choice.scent .two,
+#scent3:checked ~ .question__box .box_choice.scent .three {
+  background: #669900;
+}
+
+#scent4:checked ~ .question__box .box_choice.scent .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#scent4:checked ~ .question__box .box_choice.scent .zero,
+#scent4:checked ~ .question__box .box_choice.scent .one,
+#scent4:checked ~ .question__box .box_choice.scent .two,
+#scent4:checked ~ .question__box .box_choice.scent .three,
+#scent4:checked ~ .question__box .box_choice.scent .four {
+  background: #669900;
+}
+
+#scent5:checked ~ .question__box .box_choice.scent .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: #669900;
+}
+#scent5:checked ~ .question__box .box_choice.scent .five {
+  border-radius: 0px 50px 50px 0px;
+  background: #669900;
+}
+#scent5:checked ~ .question__box .box_choice.scent .zero,
+#scent5:checked ~ .question__box .box_choice.scent .one,
+#scent5:checked ~ .question__box .box_choice.scent .two,
+#scent5:checked ~ .question__box .box_choice.scent .three,
+#scent5:checked ~ .question__box .box_choice.scent .four,
+#scent5:checked ~ .question__box .box_choice.scent .five {
+  background: #669900;
+}
+
+/* 알콜에 대한 CSS 노가다 */
+#alc0:checked ~ .question__box .box_choice_alc .zero {
+  background: rgba(157, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(157, 255, 0, 0.705);
+  border-radius: 50px 0px 0px 50px;
+}
+
+#alc1:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(157, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(157, 255, 0, 0.705);
+}
+#alc1:checked ~ .question__box .box_choice_alc .one {
+  background: rgba(157, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(157, 255, 0, 0.705);
+}
+
+#alc2:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(229, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(229, 255, 0, 0.705);
+}
+#alc2:checked ~ .question__box .box_choice_alc .zero,
+#alc2:checked ~ .question__box .box_choice_alc .one,
+#alc2:checked ~ .question__box .box_choice_alc .two {
+  background: rgba(229, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(229, 255, 0, 0.705);
+}
+
+#alc3:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(229, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(229, 255, 0, 0.705);
+}
+#alc3:checked ~ .question__box .box_choice_alc .zero,
+#alc3:checked ~ .question__box .box_choice_alc .one,
+#alc3:checked ~ .question__box .box_choice_alc .two,
+#alc3:checked ~ .question__box .box_choice_alc .three {
+  background: rgba(229, 255, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(229, 255, 0, 0.705);
+}
+
+#alc4:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(255, 230, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 230, 0, 0.705);
+}
+#alc4:checked ~ .question__box .box_choice_alc .zero,
+#alc4:checked ~ .question__box .box_choice_alc .one,
+#alc4:checked ~ .question__box .box_choice_alc .two,
+#alc4:checked ~ .question__box .box_choice_alc .three,
+#alc4:checked ~ .question__box .box_choice_alc .four {
+  background: rgba(255, 230, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 230, 0, 0.705);
+}
+
+#alc5:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(255, 230, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 230, 0, 0.705);
+}
+
+#alc5:checked ~ .question__box .box_choice_alc .zero,
+#alc5:checked ~ .question__box .box_choice_alc .one,
+#alc5:checked ~ .question__box .box_choice_alc .two,
+#alc5:checked ~ .question__box .box_choice_alc .three,
+#alc5:checked ~ .question__box .box_choice_alc .four,
+#alc5:checked ~ .question__box .box_choice_alc .five {
+  background: rgba(255, 230, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 230, 0, 0.705);
+}
+
+#alc6:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(255, 166, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 166, 0, 0.705);
+}
+
+#alc6:checked ~ .question__box .box_choice_alc .zero,
+#alc6:checked ~ .question__box .box_choice_alc .one,
+#alc6:checked ~ .question__box .box_choice_alc .two,
+#alc6:checked ~ .question__box .box_choice_alc .three,
+#alc6:checked ~ .question__box .box_choice_alc .four,
+#alc6:checked ~ .question__box .box_choice_alc .five,
+#alc6:checked ~ .question__box .box_choice_alc .six {
+  background: rgba(255, 166, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 166, 0, 0.705);
+}
+
+#alc7:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(255, 166, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 166, 0, 0.705);
+}
+
+#alc7:checked ~ .question__box .box_choice_alc .zero,
+#alc7:checked ~ .question__box .box_choice_alc .one,
+#alc7:checked ~ .question__box .box_choice_alc .two,
+#alc7:checked ~ .question__box .box_choice_alc .three,
+#alc7:checked ~ .question__box .box_choice_alc .four,
+#alc7:checked ~ .question__box .box_choice_alc .five,
+#alc7:checked ~ .question__box .box_choice_alc .six,
+#alc7:checked ~ .question__box .box_choice_alc .seven {
+  background: rgba(255, 166, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 166, 0, 0.705);
+}
+
+#alc8:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(255, 102, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 102, 0, 0.705);
+}
+
+#alc8:checked ~ .question__box .box_choice_alc .zero,
+#alc8:checked ~ .question__box .box_choice_alc .one,
+#alc8:checked ~ .question__box .box_choice_alc .two,
+#alc8:checked ~ .question__box .box_choice_alc .three,
+#alc8:checked ~ .question__box .box_choice_alc .four,
+#alc8:checked ~ .question__box .box_choice_alc .five,
+#alc8:checked ~ .question__box .box_choice_alc .six,
+#alc8:checked ~ .question__box .box_choice_alc .seven,
+#alc8:checked ~ .question__box .box_choice_alc .eight {
+  background: rgba(255, 102, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 102, 0, 0.705);
+}
+
+#alc9:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  background: rgba(255, 102, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 102, 0, 0.705);
+}
+
+#alc9:checked ~ .question__box .box_choice_alc .zero,
+#alc9:checked ~ .question__box .box_choice_alc .one,
+#alc9:checked ~ .question__box .box_choice_alc .two,
+#alc9:checked ~ .question__box .box_choice_alc .three,
+#alc9:checked ~ .question__box .box_choice_alc .four,
+#alc9:checked ~ .question__box .box_choice_alc .five,
+#alc9:checked ~ .question__box .box_choice_alc .six,
+#alc9:checked ~ .question__box .box_choice_alc .seven,
+#alc9:checked ~ .question__box .box_choice_alc .eight,
+#alc9:checked ~ .question__box .box_choice_alc .nine {
+  background: rgba(255, 102, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 102, 0, 0.705);
+}
+
+#alc10:checked ~ .question__box .box_choice_alc .zero {
+  border-radius: 50px 0px 0px 50px;
+  /* background: rgba(255, 72, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 72, 0, 0.705); */
+  /* background: linear-gradient(to right, yellow, red); */
+}
+
+#alc10:checked ~ .question__box .box_choice_alc .zero,
+#alc10:checked ~ .question__box .box_choice_alc .one,
+#alc10:checked ~ .question__box .box_choice_alc .two,
+#alc10:checked ~ .question__box .box_choice_alc .three,
+#alc10:checked ~ .question__box .box_choice_alc .four,
+#alc10:checked ~ .question__box .box_choice_alc .five,
+#alc10:checked ~ .question__box .box_choice_alc .six,
+#alc10:checked ~ .question__box .box_choice_alc .seven,
+#alc10:checked ~ .question__box .box_choice_alc .eight,
+#alc10:checked ~ .question__box .box_choice_alc .nine {
+  background: rgba(255, 72, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 72, 0, 0.705);
+}
+
+#alc10:checked ~ .question__box .box_choice_alc .ten {
+  border-radius: 0px 50px 50px 0px;
+  background: rgba(255, 72, 0, 0.705);
+  box-shadow: 0px 0px 15px 2px rgba(255, 72, 0, 0.705);
+}
+
+#alc10:checked ~ .question__box .box_choice_alc {
+  /* background: linear-gradient(to right, #9fcdf4, #316fa4); */
+  /* background: linear-gradient(#9fcdf4, #316fa4); */
+  /* background: linear-gradient(to right, yellow, red); */
+  /* background: linear-gradient(45deg, #1fe6ff, #673ab7); */
+  /* background: linear-gradient(45deg, #22ffde, #2196f3); */
+  /* background: linear-gradient(45deg, #ffee54, #ff00ca); */
+  /* background: linear-gradient(45deg, #3bc0ff, #33ff00); */
+}
+
+#alc10:checked ~ .question__box .box_choice_alc .ten::before {
+  width: 500px;
+  height: 500px;
+  background: #000;
+  /* z-index: -1; */
+  /* pointer-events: none; */
+}
+
+@media screen and (max-width: 640px) {
+  .question__description img {
+    margin-left: 20%;
+  }
+}

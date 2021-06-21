@@ -14,6 +14,14 @@ public class DTOReview {
 	private String re_tmi;
 	private String re_image;
 	
+	public DTOReview() {
+		super();
+	}
+	
+	public DTOReview(String mem_id) {
+		this.mem_id= mem_id;
+	}
+	
 	public int getRe_pk() {
 		return re_pk;
 	}

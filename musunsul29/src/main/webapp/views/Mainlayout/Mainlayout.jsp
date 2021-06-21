@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,27 +9,26 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/musunsul29/src/main/webapp/WEB-INF/css/Mainlayout/Mainlayout.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../css/Mainlayout/Mainlayout.css'>
     <script src='#'></script>
 </head>
 <body>
 <div class="Mainlayout">
 
     <Header>
-        Header
-        <nav>Nav</nav>
+        <jsp:include page="Header.jsp" flush="false"/>
     </Header>
 
 
 
     <Section>
-Section
+
     </Section>
 
 
 
     <Footer>
-Footer
+        <jsp:include page="Footer.jsp" flush="false"/>
     </Footer>
 
 </div>
